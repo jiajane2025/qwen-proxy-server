@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+}
+
+#questionInput {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#answerBox {
+    margin-top: 20px;
+    min-height: 50px;
+    font-size: 18px;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 动态文字效果 */
+.typing-effect {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
