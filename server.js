@@ -4,7 +4,10 @@ const cors = require('cors');
 const app = express();
 
 // 1. 正确的CORS配置（删除多余的app.use(cors())）
-const allowedOrigins = ['http://localhost:5500']; // 替换为你的域名
+const allowedOrigins = [
+  'http://localhost:5500',
+  'https://qwen-c01myma70-jiajanes-projects.vercel.app'
+];// 替换为你的域名
 
 app.use(cors({
   origin: (origin, callback) => {
