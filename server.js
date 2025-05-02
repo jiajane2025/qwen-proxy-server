@@ -5,9 +5,9 @@ const app = express();
 
 // 1. 正确的CORS配置（删除多余的app.use(cors())）
 const allowedOrigins = [
-  'http://localhost:5500',
-  'https://qwen-c01myma70-jiajanes-projects.vercel.app'
-];// 替换为你的域名
+  process.env.FRONTEND_URL || 'http://localhost:5500', // 默认开发环境
+];
+// 替换为你的域名
 
 app.use(cors({
   origin: (origin, callback) => {
